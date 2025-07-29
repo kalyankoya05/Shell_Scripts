@@ -26,7 +26,7 @@
 
 set -x # Debug mode
 set -e # Exit on error
-set -o pipefail
+set -o # pipefail
 
 # usage : ./aws.sh <region> <resource_type>
 # Example: ./aws.sh us-east-1 s3
