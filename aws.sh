@@ -44,6 +44,27 @@ if ! command -v aws &> /dev/null; then
     exit 1
 fi
 
+# Check if the AWS CLI is configured
+if ! aws sts get-caller-identity &> /dev/null; then
+    echo "AWS CLI is not configured. Please configure it using 'aws configure'."
+    exit 1
+fi
+
+# Check if the provided region is valid
+if ! aws ec2 describe-regions --region $1 &> /dev/null; then
+    echo "Invalid AWS region: $1"
+    echo "Please provide a valid AWS region."
+    exit 1
+fi
+
+# Check if the provided resource type is valid
+VALID_RESOURCE_TYPES=("s3" "ec2" "lambda" "iam" "ebs" "rds" "cloudwatch" "vpc" "cloudformation" "sns" "sqs" "cloudtrail" "route53" "cloudfront")
+if [[ ! " ${VALID_RESOURCE_TYPES[@]} " =~ " $2 " ]]; then
+    echo "Invalid resource type: $2"
+    echo "Supported resource types: ${VALID_RESOURCE_TYPES[*]}"
+    exit 1
+fi
+
 # Set the AWS region
 AWS_REGION=$1
 RESOURCE_TYPE=$2
