@@ -1,0 +1,30 @@
+total 1
+-rw-r--r-- 1 kalyan.koya 1049089 215 Aug  6 14:26 file1.txt
+-rw-r--r-- 1 kalyan.koya 1049089   0 Aug  6 14:26 file2.txt
+-rw-r--r-- 1 kalyan.koya 1049089   0 Aug  6 14:26 file3.txt
+Koya Kalyan
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+total 1
+-rw-r--r-- 1 kalyan.koya 1049089 215 Aug  6 14:26 file1.txt
+-rw-r--r-- 1 kalyan.koya 1049089   0 Aug  6 14:26 file2.txt
+-rw-r--r-- 1 kalyan.koya 1049089   0 Aug  6 14:26 file3.txt
+Koya Kalyan
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
